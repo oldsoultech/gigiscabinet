@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gigi's Cabinet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #f7f5f0; /* Soft off-white background */
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --accent-color: #8fa89b; /* Earthy sage green tone common in clothing portfolios */
+            --accent-hover: #768e82;
+            --border-radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 550px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .info-list {
+            list-style: none;
+            margin-bottom: 30px;
+            padding: 0;
+        }
+
+        .info-list li {
+            font-size: 0.95rem;
+            margin: 8px 0;
+            color: var(--text-main);
+            font-weight: 400;
+        }
+
+        .info-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-weight: bold;
+        }
+
+        /* Buttons / Action Links */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(143, 168, 155, 0.2);
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(143, 168, 155, 0.3);
+        }
+
+        /* Image Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 35px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Footer Section */
+        footer {
+            margin-top: 20px;
+            border-top: 1px solid #eeeeee;
+            padding-top: 25px;
+        }
+
+        .closing-text {
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: var(--text-muted);
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: #999999;
+        }
+
+        /* Responsive changes for small screens */
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .gallery img {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Gigi's Cabinet</h1>
+            <p class="subtitle">Welcome to Gigi’s Cabinet!<br>Curated clothing, unique styles, and pre-loved favorites looking for a second life!</p>
+        </header>
+
+        <ul class="info-list">
+            <li>Fast shipping</li>
+            <li>Message for bundles!</li>
+            <li>No trades | All sales final</li>
+        </ul>
+
+        <div class="links-container">
+            <a href="https://www.depop.com/gigiscabinet/" target="_blank" class="btn">
+                <i class="fa-solid fa-bag-shopping"></i> Shop on Depop
+            </a>
+            <a href="https://www.vinted.com/member/3148640379" target="_blank" class="btn">
+                <i class="fa-solid fa-shirt"></i> Shop on Vinted
+            </a>
+        </div>
+
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=400&q=80" alt="Gigi's Cabinet Item 1">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Gigi's Cabinet Item 2">
+            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=400&q=80" alt="Gigi's Cabinet Item 3">
+        </div>
+
+        <footer>
+            <p class="closing-text">Thanks for visiting! -Morgan</p>
+            
+            <div class="social-icons">
+                <a href="https://www.depop.com/gigiscabinet/" target="_blank" title="Depop"><i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="https://www.vinted.com/member/3148640379" target="_blank" title="Vinted"><i class="fa-solid fa-shirt"></i></a>
+                <a href="mailto:contact@gigiscabinet.shop" title="Email"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+
+            <p class="copyright">&copy; 2026 Gigi's Cabinet</p>
+        </footer>
+    </div>
+
+</body>
+</html>
